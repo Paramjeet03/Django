@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>THIS IS A NORMAL TEXT</P>
+    <P>THIS IS A <B>BOLD</B> TEXT</P>
+    <P>THIS IS A <U>UNDERLINE</U> TEXT</P>
+    <P>THIS IS A <i>ITALIC</i> TEXT</P>
+    <P>THIS IS A <del>DELETED</del> TEXT</P>
+    <P>THIS IS A <big>Big</big> TEXT</P>
+    <P>THIS IS A <small>small</small> TEXT</P>
+
+    {{ peoples }}
+    <h1>this is table</h1>
+    <table border="5" style="background-color: black;">
+    <tr align="center" style="background-color: cyan;">
+        <th width="100"> S.R No. </th>
+        <th width="100">Name</th>
+        <th width="100">Age</th>
+        <th width="100">Can Vote ? </th>
+        
+    </tr>
+    {% for i in peoples %}
+    <tr align="center" style="background-color: greenyellow;">
+        <th width="50">{{forloop.counter}}</th>
+        <th width="50">{{i.Name}}</th>
+        <th width="50">{{i.Age}}</th>
+        <th width="50">
+            {% if i.Age < 20 %}
+                😊
+            {% elif i.Age < 50 %}
+                🤼‍♂️
+
+            {% else %}
+                👴
+
+            {% endif %}
+
+        </th>
+            
+    </tr>
+    {% endfor %}
+    </table>
+
+    <P>THIS IS A <sub>subscript</sub> TEXT</P>
+    <P>THIS IS A <sup>superscript</sup> TEXT</P>
+    <P>THIS IS A <tt>monospaced</tt> TEXT</P>
+    <P>THIS IS A <mark style="background-color: cyan;">Mark </mark> TEXT</P>
+</body>
+</html>

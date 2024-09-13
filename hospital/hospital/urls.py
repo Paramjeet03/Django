@@ -1,5 +1,5 @@
 """
-URL configuration for college project.
+URL configuration for hospital project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,7 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from home import views
 urlpatterns = [
+    path('', views.home ,name="home"),
+    
+    path("Jai_baba/",views.jai_baba_ki,name="Baba"),
+
     path('admin/', admin.site.urls),
+
+    path('html/', views.html,name="html"),
+    
+    path('html1/', views.html_1,name="html_1"),
+    
+    path('html2/', views.html_2,name="html_2"),
+    
+    path('html3/', views.html_3,name="html_3"),
+
+    path('html4/', views.html_4,name="html_4"),
 ]
